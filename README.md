@@ -13,4 +13,4 @@
 
 ## Preview
 
-### <a href="https://simptodosrjs.ccbp.tech" target="_blank">Link</a>
+### [Link](https://simptodosrjs.ccbp.tech)

@@ -13,4 +13,4 @@
 
 ## Preview
 
-### [Link](https://simptodosrjs.ccbp.tech){:target="\_blank"}
+### <a href="https://simptodosrjs.ccbp.tech" target="_blank">Link</a>

@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": "^10.13 || 12 || 14 || 15",
+    "node": ">=14.18.2||15 || 16 || 17 || 18 || 19 || 20",
     "npm": ">=6"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "uuid": "9.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "3.3.1",

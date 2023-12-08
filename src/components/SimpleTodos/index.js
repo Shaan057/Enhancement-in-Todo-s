@@ -56,16 +56,26 @@ class SimpleTodos extends Component {
   onFormSubmit = event => {
     event.preventDefault()
     const {userInput, todoList} = this.state
-    const input = userInput.split(' ')
-    const [title, count] = input
 
-    if (input.length === 2 && !isNaN(count) && count > 0) {
+    const match = userInput.match(/^(.*?)(\d+)$/)
+    let number = null
+    let string
+    if (match) {
+      const remainingString = match[1]
+      const lastPartIsNumber = match[2]
+      string = remainingString
+      number = lastPartIsNumber
+    } else {
+      string = userInput
+    }
+
+    if (number !== null && number > 0) {
       const newTodoList = [...todoList]
 
-      for (let a = 0; a < parseInt(count); a++) {
+      for (let a = 0; a < Number(number); a++) {
         const newTodo = {
           id: uuidv4(),
-          title,
+          title: string,
         }
         newTodoList.push(newTodo)
       }

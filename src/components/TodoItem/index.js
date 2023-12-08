@@ -1,7 +1,9 @@
 /* eslint-disable no-nested-ternary */
 import './index.css'
+// import {useState} from 'react'
 
 const Todo = props => {
+  //   const [click, setClick] = useState(false)
   const {
     todo,
     onDelete,
@@ -15,6 +17,7 @@ const Todo = props => {
   const {id, title} = todo
 
   const onClickedEditButton = () => {
+    // setClick(true)
     onEditButtonClicked(id)
   }
 
@@ -24,6 +27,8 @@ const Todo = props => {
   }
 
   const onClickedSaveButton = () => {
+    // setClick(false)
+
     onSaveButtonClicked()
   }
 
@@ -68,13 +73,6 @@ const Todo = props => {
       )}
 
       <div className="buttons-container">
-        {/* <button
-          className="save-edit-button"
-          type="button"
-          onClick={editClicked ? onClickedSaveButton : onClickedEditButton}
-        >
-          {!editClicked ? 'Edit' : 'Save'}
-        </button> */}
         {editClicked ? (
           <button
             className={title === '' ? 'warning-button' : 'save-edit-button'}
